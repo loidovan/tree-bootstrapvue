@@ -25,7 +25,7 @@
                   @click="toggleSelection"
                   @dblclick="dblClickLabel">
                 <i :class="['label-icon', prependIconClass, iconClass]" v-if="showIcon && iconClass !== null"></i>
-                <!-- <input class="form-control form-control-sm input-rename"
+                <input class="form-control form-control-sm input-rename"
                        ref="inputRename"
                        type="text"
                        v-model="renameNewLabel"
@@ -34,7 +34,7 @@
                        v-select-text
                        @blur="endRenaming"
                        v-on:keyup.esc.stop="cancelRenaming"
-                       v-on:keyup.enter.stop="endRenaming"> -->
+                       v-on:keyup.enter.stop="endRenaming">
                 <span v-else>{{ data[labelProp] }}</span>
             </span>
         </div>
