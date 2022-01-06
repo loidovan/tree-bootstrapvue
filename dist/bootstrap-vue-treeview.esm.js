@@ -1700,9 +1700,11 @@ var __vue_render__$1 = function __vue_render__() {
         $event.preventDefault();$event.stopPropagation();return _vm.dragEnter($event);
       }, "dragleave": function dragleave($event) {
         $event.preventDefault();$event.stopPropagation();return _vm.dragLeave($event);
-      }, "contextmenu": function contextmenu($event) {
-        _vm.showContextMenu($event);
-      } } }, [_c('transition', { attrs: { "name": "rotateArrow" } }, [_vm.hasChildren ? _c('svg', { staticClass: "tree-node-icon", attrs: { "width": "12", "height": "12" }, on: { "click": function click($event) {
+      },
+      //  "contextmenu": function contextmenu($event) {
+      //   _vm.showContextMenu($event);
+      // }
+     } }, [_c('transition', { attrs: { "name": "rotateArrow" } }, [_vm.hasChildren ? _c('svg', { staticClass: "tree-node-icon", attrs: { "width": "12", "height": "12" }, on: { "click": function click($event) {
         $event.preventDefault();return _vm.toggle($event);
       } } }, [_c('path', { staticClass: "svg-icon", attrs: { "d": "M2 1 L10 6 L2 11 Z" } })]) : _vm._e()]), _vm._v(" "), _c('span', { staticClass: "tree-node-label", on: { "click": _vm.toggleSelection, } }, [_vm.showIcon && _vm.iconClass !== null ? _c('i', { class: ['label-icon', _vm.prependIconClass, _vm.iconClass] }) : _vm._e(), _vm._v(" "), _vm.renaming ? _c('input', { directives: [{ name: "model", rawName: "v-model", value: _vm.renameNewLabel, expression: "renameNewLabel" }, { name: "focus", rawName: "v-focus" }, { name: "select-text", rawName: "v-select-text" }], ref: "inputRename", staticClass: "form-control form-control-sm input-rename", attrs: { "type": "text" }, domProps: { "value": _vm.renameNewLabel }, on: { "blur": _vm.endRenaming, "keyup": [function ($event) {
         if (!('button' in $event) && _vm._k($event.keyCode, "esc", 27, $event.key, "Escape")) {
@@ -2027,14 +2029,14 @@ var script$3 = {
             type: Boolean,
             default: false
         },
-        contextMenu: {
-            type: Boolean,
-            default: true
-        },
-        contextMenuItems: {
-            type: Array,
-            default: [{ code: 'DELETE_NODE', label: 'Delete node' }, { code: 'RENAME_NODE', label: 'Rename node' }]
-        },
+        // contextMenu: {
+        //     type: Boolean,
+        //     default: true
+        // },
+        // contextMenuItems: {
+        //     type: Array,
+        //     default: [{ code: 'DELETE_NODE', label: 'Delete node' }, { code: 'RENAME_NODE', label: 'Rename node' }]
+        // },
         renameNodeOnDblClick: {
             type: Boolean,
             default: true
